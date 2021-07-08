@@ -11,6 +11,12 @@ django-extensions = "*"
 django-debug-toolbar = "*"
 werkzeug = "*"
 django-environ = "*"
+djangorestframework = "*"
+markdown = "*"
+django-filter = "*"
+djoser = "*"
+cors = "*"
+django-cors-headers = "*"
 
 [requires]
 python_version = "3.9"

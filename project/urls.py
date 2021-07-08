@@ -13,12 +13,18 @@ Including another URLconf
     1. Import the include() function: from django.urls import include, path
     2. Add a URL to urlpatterns:  path('blog/', include('blog.urls'))
 """
+from core.views import ChryonListCreateView
 from django.contrib import admin
 from django.conf import settings
 from django.urls import include, path
+from core import views
+from core import views as api_views
 
 urlpatterns = [
     path('admin/', admin.site.urls),
+    path('api-auth/', include('rest_framework.urls')),
+    path('api/list-chryons/', views.ChryonListCreateView.as_view()),
+    path('api/users/', views.UserView.as_view()),
 ]
 
 if settings.DEBUG:
